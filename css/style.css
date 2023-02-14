@@ -13,7 +13,6 @@
   }
   80% {
     transform: scale(0.8);
-    border-radius: 0;
   }
   90% {
     transform: scale(1.1);
@@ -316,7 +315,15 @@ body {
   transform-origin: bottom;
 }
 .restaurants__box--full:active {
-  animation: heart 1000ms cubic-bezier(0.53, 0.21, 0.99, 0.64) forwards;
+  animation: heart 800ms cubic-bezier(0.53, 0.21, 0.99, 0.64) forwards;
+}
+@media screen and (min-width: 1024px) {
+  .restaurants__box--full:active {
+    display: none;
+  }
+  .restaurants__box--full:hover {
+    animation: heart 800ms ease-in-out forwards;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
