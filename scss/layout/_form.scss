@@ -1,0 +1,15 @@
+.location__form {
+    display: flex;
+    justify-content: center;
+    background-color: $bg-color;
+    &--searchBar {
+        padding: 1.3rem;
+        font-family: $principal-font;
+        font-size: 1.2rem;
+        background: $bg-color;
+        border: none;
+    }
+    &--icon {
+        padding-left: 3.5rem;
+    }
+}

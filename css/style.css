@@ -1,0 +1,322 @@
+@keyframes heart {
+  0% {
+    transform: scale(0);
+  }
+  20% {
+    transform: scale(0.2);
+  }
+  40% {
+    transform: scale(0.4);
+  }
+  60% {
+    transform: scale(0.6);
+  }
+  80% {
+    transform: scale(0.8);
+    border-radius: 0;
+  }
+  90% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    z-index: 0;
+  }
+}
+body {
+  max-width: 1440px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: none;
+}
+
+@font-face {
+  font-family: "shrikhand";
+  src: url(../assets/font/Shrikhand-Regular.ttf);
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../assets/font/Roboto-Regular.ttf);
+}
+.heading {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1px;
+  box-shadow: 0em 0em 10px gray;
+}
+.heading__logo {
+  width: 15rem;
+  padding: 1.2rem;
+}
+
+.location__form {
+  display: flex;
+  justify-content: center;
+  background-color: #EDEDED;
+}
+.location__form--searchBar {
+  padding: 1.3rem;
+  font-family: "Roboto";
+  font-size: 1.2rem;
+  background: #EDEDED;
+  border: none;
+}
+.location__form--icon {
+  padding-left: 3.5rem;
+}
+
+.footerInfos {
+  background: #3b3b3b;
+  padding-left: 1.8rem;
+}
+.footerInfos__image {
+  width: 7rem;
+  padding: 1.3rem 0;
+}
+.footerInfos__mentions {
+  color: white;
+  display: flex;
+  flex-flow: row wrap;
+  font-family: "Roboto";
+  padding-bottom: 2rem;
+  width: 100%;
+}
+.footerInfos__mentions--resto {
+  width: 60%;
+  display: flex;
+  align-items: center;
+}
+@media screen and (min-width: 767px) {
+  .footerInfos__mentions--resto {
+    width: 50%;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footerInfos__mentions--resto {
+    width: 20%;
+    margin: auto;
+  }
+}
+.footerInfos__mentions--resto > a {
+  text-decoration: none;
+  color: white;
+}
+.footerInfos__mentions--icon1 {
+  padding-right: 1rem;
+}
+.footerInfos__mentions--icon2 {
+  padding-right: 1rem;
+  font-size: 0.7rem;
+}
+.footerInfos__mentions--paraf {
+  margin: 0.3rem 0;
+}
+
+.explore {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.explore__bloc {
+  background-color: whitesmoke;
+  padding: 3rem 1.8rem 5rem 1.8rem;
+  text-align: center;
+}
+.explore__heading {
+  margin-top: 0;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+.explore__paraf {
+  font-family: "Roboto";
+  font-size: 1rem;
+  color: #7a7a7a;
+  margin-top: -0.8rem;
+  padding-bottom: 3rem;
+}
+.explore__btn {
+  text-decoration: none;
+  font-family: "Roboto";
+  font-size: 1rem;
+  color: white;
+  background: #9356DC;
+  border-radius: 40px;
+  box-shadow: 0rem 0.1rem 1rem #b3b3b3;
+  padding: 1.3rem;
+}
+.explore__btn:hover {
+  background: linear-gradient(to left top, #9356DC, #FF79DA);
+  box-shadow: 0rem 0.1rem 1rem #4d4d4d;
+}
+
+.functionality {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 0;
+}
+.functionality__heading {
+  width: 80%;
+  font-family: "Roboto";
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0 0 0.8rem 3rem;
+}
+.functionality__bloc {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  gap: 30px;
+}
+.functionality__bloc--card {
+  width: 19rem;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  background: whitesmoke;
+  border-radius: 25px;
+  margin-left: 1.2rem;
+  padding: 1rem 0 0.5rem 0.5rem;
+  gap: 10px;
+  box-shadow: 0 0 10px #b3b3b3;
+}
+@media screen and (min-width: 693px) and (max-width: 717px) {
+  .functionality__bloc--card {
+    width: 11rem;
+  }
+}
+@media screen and (min-width: 718px) and (max-width: 1053px) {
+  .functionality__bloc--card {
+    width: 12rem;
+  }
+}
+.functionality__bloc--card:hover {
+  background-color: #f2eafb;
+}
+.functionality__bloc--card:hover .functionality__bloc--icon {
+  color: #9356DC;
+}
+.functionality__bloc--number {
+  position: relative;
+  background-color: #9356DC;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 50%;
+  font-family: "Roboto";
+  font-size: 1rem;
+  left: -22px;
+}
+.functionality__bloc--icon {
+  position: relative;
+  left: -12px;
+  color: gray;
+}
+.functionality__bloc--heading {
+  font-family: "Roboto";
+  font-size: 1rem;
+}
+
+.restaurants {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  padding-bottom: 5rem;
+  background-color: #EDEDED;
+}
+.restaurants__heading {
+  padding: 3rem 0 0 1rem;
+  font-family: "Roboto";
+}
+@media screen and (min-width: 767px) {
+  .restaurants__heading {
+    width: 100%;
+  }
+}
+.restaurants__box {
+  display: flex;
+  width: 100%;
+  padding: 0.8rem 1rem;
+}
+@media screen and (min-width: 767px) {
+  .restaurants__box {
+    width: 45%;
+    flex-flow: row wrap;
+    margin: auto;
+    padding: 1rem 0;
+  }
+}
+.restaurants__box--card {
+  width: 100%;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #6e6e6e;
+  position: relative;
+}
+@media screen and (min-width: 767px) {
+  .restaurants__box--card {
+    min-width: 350px;
+  }
+}
+.restaurants__box--image {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+.restaurants__box--annotation {
+  background-color: aquamarine;
+  color: #007f54;
+  padding: 5px 10px;
+  border-radius: 0.1em;
+  font-family: "Roboto";
+  position: absolute;
+  top: 5px;
+  right: 20px;
+}
+.restaurants__box--heading {
+  padding-left: 0.8rem;
+  font-family: "Roboto";
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.restaurants__box--paraf {
+  margin-top: -0.9rem;
+  font-family: "Roboto";
+  font-size: 1.1rem;
+  padding: 0 0 0.5rem 0.8rem;
+}
+.restaurants__box--icon {
+  font-size: 2rem;
+  position: absolute;
+  right: 30px;
+  bottom: 25px;
+}
+.restaurants__box--empty {
+  position: relative;
+  color: black;
+  cursor: pointer;
+  z-index: 0;
+}
+.restaurants__box--full {
+  position: absolute;
+  right: 0;
+  background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transform-origin: bottom;
+}
+.restaurants__box--full:active {
+  animation: heart 1000ms cubic-bezier(0.53, 0.21, 0.99, 0.64) forwards;
+}
+
+/*# sourceMappingURL=style.css.map */

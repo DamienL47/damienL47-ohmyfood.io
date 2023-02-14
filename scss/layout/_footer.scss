@@ -1,0 +1,43 @@
+.footerInfos {
+    background: darken($bg-color, $amount: 70);
+    padding-left: 1.8rem;
+    &__image {
+        width: 7rem; 
+        padding: 1.3rem 0;
+    }
+    &__mentions {
+        color: white;
+        display: flex;
+        flex-flow: row wrap;
+        font-family: $principal-font;
+        padding-bottom: 2rem;
+        width: 100%;
+        &--resto {
+            width: 60%;
+            display: flex;
+            align-items: center;
+            @media screen and (min-width: 767px) {
+                width: 50%;
+                margin: auto;
+            }
+            @media screen and (min-width: 1024px) {
+                width: 20%;
+                margin: auto;
+            }
+        }
+        &--resto > a {
+            text-decoration: none;
+            color: white;
+        }
+        &--icon1 {
+            padding-right: 1rem;
+        }
+        &--icon2 {
+            padding-right: 1rem;
+            font-size: .7rem;
+        }
+        &--paraf {
+            margin: .3rem 0;
+        }
+    }
+}
