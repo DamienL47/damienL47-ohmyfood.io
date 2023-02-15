@@ -1,3 +1,37 @@
+.home {
+    opacity: 0;
+    animation: home 1s ease-in-out 3s forwards;
+}
+
+.loadSpinner {
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    &--circle {
+        opacity: 1;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 3px solid darken($bg-color, $amount: 50);
+        animation: circleColor 1s linear infinite alternate,
+                   spinCircle 3s linear infinite,
+                   loadSpinner 3s linear forwards;
+        padding-top: 10px;
+    }
+    &--ustencils {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 50px;
+        color: $color-primary;
+        animation: loadSpinner 3s ease-out forwards;
+    }
+}
+
+
 .explore {
     width: 100%;
     display: flex;
@@ -36,7 +70,7 @@
         font-family: $principal-font;
         font-size: 2rem;
         font-weight: bold;
-        padding: 0 0 .8rem 3rem;
+        padding-bottom: .8rem;
     }
     &__bloc {
         display: flex;
@@ -186,5 +220,6 @@
         }
     }
 }
+
 
 

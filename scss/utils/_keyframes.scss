@@ -1,0 +1,70 @@
+@keyframes circleColor {
+    from {
+        box-shadow:
+         0 0 0 $color-primary,
+         0 0 0 $color-secondary,
+         0 0 0 $color-thrid,
+         0 0 0 $bg-color;
+    }
+    to {
+        box-shadow:
+         0 -10px 5px $color-primary,
+         -10px 0 5px $color-secondary,
+         0 10px 5px $color-thrid,
+         10px 0 5px $bg-color;
+    }
+}
+@keyframes spinCircle {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes home {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes loadSpinner {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+@keyframes heart {
+    0%{
+        transform: scale(0);
+    }
+    20% {
+        transform: scale(0.2);
+    }
+    40% {
+        transform: scale(0.4);
+    }
+    60% {
+        transform: scale(0.6);
+    }
+    80% {
+        transform: scale(0.8);
+    }
+    90% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+        z-index: 0;
+    }
+}

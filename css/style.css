@@ -1,3 +1,36 @@
+@keyframes circleColor {
+  from {
+    box-shadow: 0 0 0 #9356DC, 0 0 0 #FF79DA, 0 0 0 #99E2D0, 0 0 0 #EDEDED;
+  }
+  to {
+    box-shadow: 0 -10px 5px #9356DC, -10px 0 5px #FF79DA, 0 10px 5px #99E2D0, 10px 0 5px #EDEDED;
+  }
+}
+@keyframes spinCircle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+@keyframes home {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes loadSpinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @keyframes heart {
   0% {
     transform: scale(0);
@@ -15,7 +48,7 @@
     transform: scale(0.8);
   }
   90% {
-    transform: scale(1.1);
+    transform: scale(1.5);
   }
   100% {
     transform: scale(1);
@@ -116,6 +149,37 @@ body {
   margin: 0.3rem 0;
 }
 
+.home {
+  opacity: 0;
+  animation: home 1s ease-in-out 3s forwards;
+}
+
+.loadSpinner {
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.loadSpinner--circle {
+  opacity: 1;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #6e6e6e;
+  animation: circleColor 1s linear infinite alternate, spinCircle 3s linear infinite, loadSpinner 3s linear forwards;
+  padding-top: 10px;
+}
+.loadSpinner--ustencils {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: #9356DC;
+  animation: loadSpinner 3s ease-out forwards;
+}
+
 .explore {
   width: 100%;
   display: flex;
@@ -166,7 +230,7 @@ body {
   font-family: "Roboto";
   font-size: 2rem;
   font-weight: bold;
-  padding: 0 0 0.8rem 3rem;
+  padding-bottom: 0.8rem;
 }
 .functionality__bloc {
   display: flex;
