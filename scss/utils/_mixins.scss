@@ -13,6 +13,40 @@
     }
 }
 
-
+@mixin heart ($positionX, $positionY) {
+    &--icon {
+        font-size: 2rem;
+        position: absolute;
+        right: $positionX;
+        top: $positionY;
+    }
+    &--empty {
+        position: relative;
+        color: black;
+        cursor: pointer;
+        z-index: 0;      
+    }
+    &--full {
+        position: absolute;
+        right: 0;
+        background-image: linear-gradient(to bottom, $color-primary, $color-secondary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        opacity: 0;
+        transform-origin: bottom;
+        &:active {
+            animation: heart 800ms cubic-bezier(.53,.21,.99,.64) forwards;
+        }
+        @media screen and (min-width: 1024px) {
+            &:active {
+                display: none;
+            }
+            &:hover {
+                animation: heart 800ms ease-in-out forwards;
+            }
+        }
+    }
+}
 
 
