@@ -8,6 +8,7 @@
     box-shadow: 0rem 0.1rem 1rem lighten($colorShadow, $amount: 70) ;
     padding: 1.3rem;
     &:hover {
+        transition: all 1s ease-in-out;
         background: linear-gradient(to left top, $colorPrincipal, $hoverColor);
         box-shadow: 0rem 0.1rem 1rem lighten($colorShadow, $amount: 30) ;
     }
