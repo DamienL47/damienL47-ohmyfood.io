@@ -1,7 +1,5 @@
 .menu {
     width: 100%;
-    max-width: 800px;
-    margin: auto;
     &__image {
         width: 100%;
         height: 21rem;
@@ -11,18 +9,24 @@
         position: relative;
         top: -100px;
         background-color: lighten($bg-color, $amount: 2);
-        padding: 0 1rem;
+        padding: 0 1rem 2rem 1rem;
         border-radius: 30px 30px 0 0;
         @include heart(45px, 40px);
         &--heading {
             padding: 2.1rem 0 0 0;
             font-family: $title-font;
-            font-size: 2.1rem;
+            font-size: 1.9rem;
+        }
+        &--btn {
+            width: 40%;
+            text-align: center;
+            margin: 50px auto;
+            @include btn(white, $color-primary, black, $color-secondary);
         }
     }
     &__list {
         display: flex;
-        flex-direction: column;
+        flex-flow: row wrap;
         gap: 20px;
         &--heading {
             font-family: $principal-font;
@@ -38,38 +42,107 @@
                 bottom: -3px;
                 left: 0;
             }
+            @media screen and (min-width: 769px) {
+                margin-left: -200px;
+            }
             &.plat, &.dessert {
                 margin-top: 30px;
+                @media screen and (min-width: 769px) {
+                    margin-top: 0;
+                }
+            }
+        }
+        &--bloc {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            @media screen and (min-width: 1024px) {
+                width: 30%;
+                align-items: center;
             }
         }
     }
     &__plats {
         background-color: white;
         border-radius: 20px;
-        padding: 0 1rem;
         font-family: $principal-font;
         box-shadow: 0 0 10px darken($bg-color, $amount: 10);
         position: relative;
         cursor: pointer;
-        text-overflow: ellipsis;
+        @media screen and (min-width: 1024px) {
+            width: 100%;
+        }
+        &--boxFlex {
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+            width: 100%;
+        } 
+        &--content {
+            width: 70%;
+            padding: 0 1rem;
+            @media screen and (min-width: 1024px) {
+                width: 70%;
+            }
+        }
         &--heading {
-            font-weight: 900;
+            margin: 10px 0;
             font-size: 1.2rem;
-            margin-top: 15px;
-        }
-        &:active {
-            content: "";
-
-
-        }
-    }
-    &__tarif {
-        display: flex;
-        justify-content: space-between;
-        margin-top: -35px;
-        font-family: $principal-font;
-        &--prix {
             font-weight: 900;
+            @include elips;
+            @media screen and (min-width: 1024px) {
+                font-size: .9rem;
+            }
         }
+        &--description {
+            margin: 0 0 10px 0;
+            font-size: .9rem;
+            font-weight: 100;
+            @include elips;
+            @media screen and (min-width: 1024px) {
+                font-size: .7rem;
+            }
+        }
+        &--prix {
+            width: 20%;
+            padding-top: 2rem;
+            font-weight: 900;
+            position: relative;
+            @media screen and (min-width: 1024px) {
+                font-size: .8rem;
+                margin: 0 10px;
+                right: 0px;
+            }
+        }
+        &--style {
+            position: absolute;
+            top: 40%;
+            right: 7%;
+            display: inline-block;
+        }
+        &--select {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 1s;
+            opacity: 0;
+            width: 0%;
+            background-color: $color-thrid;
+            border-radius: 0 20px 20px 0;
+        }
+        &--icon {
+            opacity: 0;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%, -50%);
+            font-size: 1.2rem;
+            background-color: white;
+            border-radius: 12px 12px;
+            padding: 3px;
+            color: $color-thrid;
+        }
+        @include animationCheck;
+        @include apparition;
     }
 }

@@ -1,6 +1,9 @@
 .footerInfos {
     background: darken($bg-color, $amount: 70);
     padding-left: 1.8rem;
+    &.menuSize {
+        margin-top: -150px;
+    }
     &__image {
         width: 7rem; 
         padding: 1.3rem 0;

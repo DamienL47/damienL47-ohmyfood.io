@@ -48,5 +48,57 @@
         }
     }
 }
+@mixin elips {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
 
+@mixin animationCheck {
+    &:active &--content {
+        width: 55%;
+        transition: all 1s;
+    }
+    &:active &--select {
+        width: 20%;
+        animation: checked 2s ease-in-out forwards;
+    }    
+    &:active &--icon {
+        animation: check 1s ease-in 100ms forwards;
+    }
+    @media screen and (min-width: 1024px) {
+        &:hover &--content {
+            width: 45%;
+            transition: all 1s ease-in-out;
+            @media screen and (min-width: 1200px) {
+                width: 55%;
+            }
+        }
+        &:hover &--select {
+            width: 20%;
+            animation: checked 2s ease-in-out forwards;
+        }
+        &:hover &--icon {
+            animation: check 1s ease-in 100ms forwards;
+        } 
+    }
+}
+
+@mixin apparition {
+    opacity: 0;
+    animation: apparition 2s ease-in-out forwards;
+
+    &.delay1 {
+        animation-delay: 300ms;
+    }
+    &.delay2 {
+        animation-delay: 700ms;
+    }
+    &.delay3 {
+        animation-delay: 1000ms;
+    }
+    &.delay4 {
+        animation-delay: 1300ms;
+    }
+}
 
