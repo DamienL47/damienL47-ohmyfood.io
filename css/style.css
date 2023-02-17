@@ -101,6 +101,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow-x: none;
+  margin: auto;
 }
 
 @font-face {
