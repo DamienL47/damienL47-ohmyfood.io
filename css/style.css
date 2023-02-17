@@ -460,9 +460,9 @@ body {
   border-radius: 30px 30px 0 0;
 }
 .menu__card--icon {
-  font-size: 2rem;
+  font-size: 1.7rem;
   position: absolute;
-  right: 45px;
+  right: 25px;
   top: 40px;
 }
 .menu__card--empty {
@@ -493,9 +493,9 @@ body {
   }
 }
 .menu__card--heading {
-  padding: 2.1rem 0 0 0;
+  padding: 2rem 0 0 0;
   font-family: "shrikhand";
-  font-size: 1.9rem;
+  font-size: 1.7rem;
 }
 .menu__card--btn {
   width: 40%;
@@ -534,7 +534,7 @@ body {
   bottom: -3px;
   left: 0;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1024px) {
   .menu__list--heading {
     margin-left: -200px;
   }

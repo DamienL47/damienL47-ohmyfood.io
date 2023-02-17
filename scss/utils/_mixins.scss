@@ -13,9 +13,9 @@
     }
 }
 
-@mixin heart ($positionX, $positionY) {
+@mixin heart ($positionX, $positionY, $size) {
     &--icon {
-        font-size: 2rem;
+        font-size: $size;
         position: absolute;
         right: $positionX;
         top: $positionY;
