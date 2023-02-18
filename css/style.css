@@ -8,6 +8,7 @@
 }
 @keyframes spinCircle {
   from {
+    opacity: 1;
     transform: rotate(0deg);
   }
   to {
@@ -264,7 +265,7 @@ body {
   padding: 1.3rem;
 }
 .explore__btn:hover {
-  transition: all 1s ease-in-out;
+  transition: all 300ms ease-in-out;
   background: linear-gradient(to left top, #9356DC, #FF79DA);
   box-shadow: 0rem 0.1rem 1rem #4d4d4d;
 }
@@ -437,9 +438,6 @@ body {
   animation: heart 800ms cubic-bezier(0.53, 0.21, 0.99, 0.64) forwards;
 }
 @media screen and (min-width: 1024px) {
-  .restaurants__box--full:active {
-    display: none;
-  }
   .restaurants__box--full:hover {
     animation: heart 800ms ease-in-out forwards;
   }
@@ -486,9 +484,6 @@ body {
   animation: heart 800ms cubic-bezier(0.53, 0.21, 0.99, 0.64) forwards;
 }
 @media screen and (min-width: 1024px) {
-  .menu__card--full:active {
-    display: none;
-  }
   .menu__card--full:hover {
     animation: heart 800ms ease-in-out forwards;
   }
@@ -512,7 +507,7 @@ body {
   padding: 1.3rem;
 }
 .menu__card--btn:hover {
-  transition: all 1s ease-in-out;
+  transition: all 300ms ease-in-out;
   background: linear-gradient(to left top, #9356DC, #FF79DA);
   box-shadow: 0rem 0.1rem 1rem #4d4d4d;
 }
