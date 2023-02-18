@@ -218,7 +218,7 @@ body {
   height: 150px;
   border-radius: 50%;
   border: 3px solid #6e6e6e;
-  animation: circleColor 1s linear infinite alternate, spinCircle 3s linear infinite, loadSpinner 3s linear forwards;
+  animation: circleColor 3s linear infinite alternate, spinCircle 3s linear infinite forwards, loadSpinner 3s linear forwards;
   padding-top: 10px;
 }
 .loadSpinner--ustencils {

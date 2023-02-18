@@ -15,8 +15,8 @@
         height: 150px;
         border-radius: 50%;
         border: 3px solid darken($bg-color, $amount: 50);
-        animation: circleColor 1s linear infinite alternate,
-                   spinCircle 3s linear infinite,
+        animation: circleColor 3s linear infinite alternate,
+                   spinCircle 3s linear infinite forwards,
                    loadSpinner 3s linear forwards;
         padding-top: 10px;
     }
