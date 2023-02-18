@@ -536,6 +536,11 @@ body {
     margin-left: -200px;
   }
 }
+@media screen and (min-width: 1400px) {
+  .menu__list--heading {
+    margin-left: -330px;
+  }
+}
 .menu__list--heading.plat, .menu__list--heading.dessert {
   margin-top: 30px;
 }
