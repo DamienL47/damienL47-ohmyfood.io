@@ -4,6 +4,9 @@
 Lien vers le projet finalisé :  
 https://ohmyfood-dl.netlify.app/  
   
+Date de début de projet : Lundi 13 Février 2023    
+Date  de fin de projet : Vendredi 17 Février 2023  
+Temps consacré au projet : 35h/semaine du lundi au vendredi  
 Briefing de projet!
 
 Enjeux  
