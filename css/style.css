@@ -690,6 +690,19 @@ body {
     animation: check 1s ease-in 100ms forwards;
   }
 }
+@media screen and (min-width: 768px) {
+  .menu__plats:active .menu__plats--content {
+    width: 60%;
+    transition: all 1s;
+  }
+  .menu__plats:active .menu__plats--select {
+    width: 20%;
+    animation: checked 2s ease-in-out forwards;
+  }
+  .menu__plats:active .menu__plats--icon {
+    animation: check 1s ease-in 100ms forwards;
+  }
+}
 .menu__plats.delay1 {
   animation-delay: 300ms;
 }

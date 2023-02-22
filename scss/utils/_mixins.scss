@@ -83,6 +83,19 @@
             animation: check 1s ease-in 100ms forwards;
         } 
     }
+    @media screen and (min-width: 768px) {
+        &:active &--content {
+            width: 60%;
+            transition: all 1s;
+        }
+        &:active &--select {
+            width: 20%;
+            animation: checked 2s ease-in-out forwards;
+        }  
+        &:active &--icon {
+            animation: check 1s ease-in 100ms forwards;
+        }
+    }
 }
 
 @mixin apparition {
